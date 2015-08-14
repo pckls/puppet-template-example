@@ -1,0 +1,11 @@
+backend default {
+    .host = "<%= @host %>";
+    .port = "80";
+    .probe = {
+        .url = "/";
+        .timeout = 0.1s;
+        .interval = 1s;
+        .window = 10;
+        .threshold = 8;
+    }
+}
